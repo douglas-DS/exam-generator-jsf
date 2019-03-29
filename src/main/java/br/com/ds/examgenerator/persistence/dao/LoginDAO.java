@@ -19,6 +19,10 @@ public class LoginDAO implements Serializable {
     }
 
     public Token loginReturningToken(String username, String password) {
+        String credentials = "{\"username\": +" +
+                addQuotes(username) +
+                "\n\"password\": " + addQuotes(password) +
+                "\n+}";
     }
 
     public String addQuotes(String value) {
